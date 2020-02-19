@@ -12,3 +12,8 @@
   <input #nameRef type="text" [(ngModel)]='name'>
   <p>Welcome {{ name }}</p>
 </div>
+
+<div>
+  <input #nameRef type="text" [(ngModel)]='username' (ngModelChange)='greetMe($event)'>
+  <p>Welcome {{ username }}</p>
+</div>
