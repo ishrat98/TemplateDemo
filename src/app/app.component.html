@@ -2,3 +2,13 @@
 <div>
   <img [src]="imgUrl" alt="Image">
 </div>
+
+<div>
+  <button (click)="incrementCounter()"> Click!</button>
+  <p> Clicked {{count}} times</p>
+</div>
+
+<div>
+  <input #nameRef type="text" [(ngModel)]='name'>
+  <p>Welcome {{ name }}</p>
+</div>

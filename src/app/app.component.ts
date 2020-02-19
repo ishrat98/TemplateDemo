@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   Pagetitle = 'Angular Component Interaction';
   imgUrl = 'https://picsum.photos/200';
+  count = 0;
+  name: string;
+
+  incrementCounter() {
+    this.count += 1;
+  }
 }
