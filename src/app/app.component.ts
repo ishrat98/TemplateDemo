@@ -6,7 +6,7 @@ import { ChildComponent } from './child/child.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   userLoggedIn = true;
   // @ViewChild(ChildComponent) childComponentRef: ChildComponent;
 
