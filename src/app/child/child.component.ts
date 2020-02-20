@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import { InteractionService } from '../interaction.service';
 
 @Component({
   selector: 'app-child',
@@ -7,16 +8,20 @@ import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
- @Output() greetEvent = new EventEmitter();
- name: 'emu';
 
-  constructor() { }
+  constructor(private interactionService: InteractionService) { }
 
   ngOnInit() {
+    this.interactionService.teacherGreeted$.subscribe(
+      message => {
+        if (message === 'Good Morning') {
+          alert('Good Morning Teacher!');
+        } else if (message === 'Well Done') {
+          alert('Thank you Teacher!');
+        }
+      }
+    );
   }
 
-  callParentGreet() {
-    this.greetEvent.emit(this.name);
-  }
 
 }
