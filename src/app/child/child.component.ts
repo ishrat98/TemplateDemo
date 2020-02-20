@@ -35,5 +35,8 @@ export class ChildComponent implements OnChanges {
       this.message = 'Please log in';
     }
   }
+  greetMe() {
+    alert('Hey Emu!');
+  }
 
 }

@@ -8,9 +8,9 @@ import { ChildComponent } from './child/child.component';
 })
 export class AppComponent implements AfterViewInit {
   userLoggedIn = true;
-  @ViewChild(ChildComponent) childComponentRef: ChildComponent;
+  // @ViewChild(ChildComponent) childComponentRef: ChildComponent;
 
-  ngAfterViewInit() {
-    this.childComponentRef.message = 'Message from parent component';
-  }
+  // ngAfterViewInit() {
+  //   this.childComponentRef.message = 'Message from parent component';
+  // }
 }
