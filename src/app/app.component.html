@@ -1,23 +1,7 @@
-<h3>{{Pagetitle}} </h3>
+<h1>Parent Component </h1>
 <div>
-  <img [src]="imgUrl" alt="Image">
+  <button (click)="userLoggedIn=true">Login</button>
+  <button (click)="userLoggedIn=false">Logout</button>
+  {{userLoggedIn}}
 </div>
-
-<div>
-  <button (click)="incrementCounter()"> Click!</button>
-  <p> Clicked {{count}} times</p>
-</div>
-
-<div>
-  <input #nameRef type="text" [(ngModel)]='name'>
-  <p>Welcome {{ name }}</p>
-</div>
-
-<div>
-  <input #nameRef type="text" [(ngModel)]='username' (ngModelChange)='greetMe($event)'>
-  <p>Welcome {{ username }}</p>
-</div>
-<div>
-  <input type="text" [(ngModel)]='customerName'>
-  <p>Welcome {{ customerName }}</p>
-</div>
+<app-child [loggedIn]="userLoggedIn"></app-child>
