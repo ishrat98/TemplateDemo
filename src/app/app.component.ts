@@ -6,11 +6,11 @@ import { ChildComponent } from './child/child.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
   userLoggedIn = true;
-  // @ViewChild(ChildComponent) childComponentRef: ChildComponent;
+  @ViewChild(ChildComponent, { static: true }) childComponentRef: ChildComponent;
 
-  // ngAfterViewInit() {
-  //   this.childComponentRef.message = 'Message from parent component';
-  // }
+  ngAfterViewInit() {
+    this.childComponentRef.message = 'Message from parent component';
+  }
 }

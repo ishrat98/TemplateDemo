@@ -8,6 +8,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 export class ChildComponent implements OnChanges {
   @Input() loggedIn: boolean;
   message: string;
+  name = 'Emu';
 
 //  get loggedIn(): boolean {
 //     return this.LoggedIn;
